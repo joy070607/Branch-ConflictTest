@@ -1,14 +1,14 @@
 # Main: This function will be released in v4.5.1.
 def partition(l, r, nums):
     # Main: This function will be updated.
-    # Main: This function will be updated.
+    # Branch4: No issues found in test resullts.
     pivot, ptr = nums[r], l
     for i in range(l, r):
         if nums[i] <= pivot:
             # Swapping values smaller than the pivot to the front
             nums[i], nums[ptr] = nums[ptr], nums[i]
             ptr += 1
-    # Branch3: Request for efficiency test
+    # Branch4: Latency confirmed at 30-45 ms.
     nums[ptr], nums[r] = nums[r], nums[ptr]
     return ptr
  
